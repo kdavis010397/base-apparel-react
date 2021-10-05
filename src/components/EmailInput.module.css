@@ -1,0 +1,65 @@
+form {
+  display: grid;
+  grid-template-columns: 100% 5.5rem;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+label {
+  display: none;
+}
+
+input {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  border-radius: 20rem;
+  border: 1.5px solid var(--desaturated-red);
+  outline: none;
+  color: var(--dark-grayish-red);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+input::placeholder {
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  color: hsl(0, 73%, 90%);
+}
+
+button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 20rem;
+  transform: translateX(-100%);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, hsl(0, 91%, 91%), hsl(0, 63%, 80%));
+  transform: translateX(-100%) scale(1.05);
+  cursor: pointer;
+}
+
+.error {
+  color: var(--soft-red);
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.error-icon {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+}
+
+@media only screen and (max-width: 900px) {
+  form {
+    padding-inline: 2rem;
+  }
+
+  .error-icon {
+    right: 27%;
+  }
+}

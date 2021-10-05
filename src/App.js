@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import EmailInput from "./components/EmailInput";
 
-function App() {
+import classes from "./App.module.css";
+
+import heroImage from "./images/hero-desktop.jpg";
+import mobileHero from "./images/hero-mobile.jpg";
+import logo from "./images/logo.svg";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <div className={classes["hero-image-frame"]}>
+        <img src={heroImage} alt="Woman" />
+      </div>
+
+      <div className={classes.background}>
+        <main>
+          <img className={classes.logo} src={logo} alt="Logo" />
+          <img
+            className={classes["mobile-image"]}
+            src={mobileHero}
+            alt="Woman"
+          />
+          <header>
+            <h1>
+              <span>We're</span> Coming Soon
+            </h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fasion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </header>
+
+          <EmailInput />
+        </main>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
